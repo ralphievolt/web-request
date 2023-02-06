@@ -19,8 +19,8 @@ export default function Home() {
             <section className="not-format">
               <article className="p-6 mb-6 text-base bg-white  border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                 <footer className="flex justify-between items-center mb-2">
-                  <div className="flex items-center text-purple-600">
-                    <p className="inline-flex items-center mr-3 text-sm font-bold  dark:text-white">
+                  <div className="flex items-center ">
+                    <p className="inline-flex items-center mr-3 text-sm font-bold text-purple-600 dark:text-white">
                       Jess Estabelo
                     </p>
                     <p className="text-sm  dark:text-gray-400">
@@ -30,7 +30,7 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <p className="items-end mr-3 text-sm text-purple-600 dark:text-white">
+                  <p className="items-end mr-3 text-sm font-bold text-purple-600 dark:text-white">
                     Requested
                   </p>
                   <button
@@ -70,8 +70,8 @@ export default function Home() {
 
               <article className="p-6 mb-6 text-base bg-white  border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                 <footer className="flex justify-between items-center mb-2">
-                  <div className="flex items-center text-purple-600">
-                    <p className="inline-flex items-center mr-3 text-sm font-bold  dark:text-white">
+                  <div className="flex items-center">
+                    <p className="inline-flex items-center mr-3 text-sm font-bold  text-purple-600 dark:text-white">
                       Antony Antony
                     </p>
                     <p className="text-sm  dark:text-gray-400">
@@ -81,8 +81,8 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <p className="items-end mr-3 text-sm text-purple-600 dark:text-white">
-                    Requested
+                  <p className="items-end mr-3 text-sm font-bold text-purple-600 dark:text-white">
+                    In-Progress
                   </p>
                   <button
                     id="dropdownComment3Button"
@@ -122,20 +122,7 @@ export default function Home() {
           </article>
         </div>
       </main>
-
-      <footer className="bg-gray-50 dark:bg-gray-800">
-        <div className="p-4 py-2 mx-auto max-w-screen-xl md:p-8 lg:p-5">
-          <div className="text-center">
-            <span className="block text-sm text-center text-gray-500 dark:text-gray-400">
-              © 2023{" "}
-              <a href="#" className="hover:underline">
-                Web Request
-              </a>
-              . All Rights Reserved.
-            </span>
-          </div>
-        </div>
-      </footer>
+      x
     </>
   );
 }

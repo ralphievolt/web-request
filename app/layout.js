@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
                 className="h-6 mr-3 sm:h-9"
                 alt="Flowbite Logo"
               /> */}
-              <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="self-center text-xl font-bold whitespace-nowrap dark:text-white text-purple-600">
                 WebRequest
               </span>
             </a>
@@ -122,16 +122,16 @@ export default function RootLayout({ children }) {
                 <li>
                   <a
                     href="/"
-                    className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                    className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-600 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     aria-current="page"
                   >
-                    Request
+                    Cut Request
                   </a>
                 </li>
                 <li>
                   <a
                     href="/request-list"
-                    className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-600 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Request List
                   </a>
@@ -141,6 +141,16 @@ export default function RootLayout({ children }) {
           </div>
         </nav>
         {children}
+
+        <footer className="bg-gray-50 dark:bg-gray-800">
+          <div className="p-4 py-2 mx-auto max-w-screen-xl md:p-8 lg:p-5">
+            <div className="text-center">
+              <span className="block text-sm text-center text-gray-500 dark:text-gray-400">
+                © 2023 Web Request . All Rights Reserved.
+              </span>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
