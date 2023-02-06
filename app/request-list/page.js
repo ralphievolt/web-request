@@ -24,11 +24,7 @@ export default function Home() {
                       Jess Estabelo
                     </p>
                     <p className="text-sm  dark:text-gray-400">
-                      <time
-                        pubdate
-                        datetime="2022-03-12"
-                        title="March 12th, 2022"
-                      >
+                      <time dateTime="2022-03-12" title="March 12th, 2022">
                         Mar. 12, 2022
                       </time>
                     </p>
@@ -79,11 +75,7 @@ export default function Home() {
                       Antony Antony
                     </p>
                     <p className="text-sm  dark:text-gray-400">
-                      <time
-                        pubdate
-                        datetime="2022-03-12"
-                        title="March 12th, 2022"
-                      >
+                      <time dateTime="2022-03-12" title="March 12th, 2022">
                         Mar. 15, 2022
                       </time>
                     </p>
