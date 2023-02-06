@@ -15,9 +15,21 @@ export default function Home() {
     // console.log(pathRef.current.value);
     // console.log(fileNameRef.current.value);
 
-    const re2 = new RegExp("\\\\", "g");
-    const str2 = path.replace(re2, "/");
-    console.log(str2);
+    const reg1 = new RegExp("\\\\", "g");
+    const noBackSlash = path.replace(reg1, "/");
+    console.log(noBackSlash);
+
+    const reg2 = new RegExp("C:/PDM/", "g");
+    const onlinePath = noBackSlash.replace(
+      reg2,
+      "https://torepdm2022.array.local/SOLIDWORKSPDM/"
+    );
+    console.log(onlinePath);
+
+    const reg3 = new RegExp(" ", "g");
+    const finalURL = onlinePath.replace(reg3, "%20");
+    console.log(finalURL + "/" + fileNameRef.current.value);
+
     // pathRef.replace("C:\PDM\","http://torepdm2022.array.local/SOLIDWORKSPDM/")
 
     //http://torepdm2022.array.local/SOLIDWORKSPDM
