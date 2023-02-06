@@ -1,91 +1,80 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+"use client";
+import { Inter } from "@next/font/google";
+import { Table, Label, TextInput, Checkbox, Button } from "flowbite-react";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
+        <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
+          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+            <header className="mb-4 lg:mb-6 not-format">
+              <h1 className="mb-4 text-3xl font-bold leading-tight text-purple-600 lg:mb-6 lg:text-4xl dark:text-white">
+                Cutting Request
+              </h1>
+            </header>
+
+            <section className="not-format">
+              <div className="flex justify-between items-center mb-6 border-t">
+                <h2 className="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">
+                  Fill-out form with complete details
+                </h2>
+              </div>
+              <form className="flex flex-col gap-4">
+                <div className="w-2/3">
+                  <div className="mb-2 block">
+                    <Label htmlFor="job_number" value="Job Number" />
+                  </div>
+                  <TextInput id="job_number" type="number" required={true} />
+                </div>
+                <div>
+                  <div className="mb-2 block">
+                    <Label htmlFor="file_path" value="File Path" />
+                  </div>
+                  <TextInput
+                    id="file_path"
+                    type="text"
+                    placeholder="C:\PDM\ArrayVault1\Brands\"
+                    required={true}
+                  />
+                </div>
+                <div>
+                  <div className="mb-2 block">
+                    <Label htmlFor="cut_file_name" value="Cut File Name" />
+                  </div>
+                  <TextInput id="cut_file_name" type="text" required={true} />
+                </div>
+                {/* <div className="flex items-center gap-2">
+                  <Checkbox id="remember" />
+                  <Label htmlFor="remember">Remember me</Label>
+                </div> */}
+                <Button
+                  type="submit"
+                  className="bg-purple-600 hover:bg-purple-500"
+                >
+                  Add
+                </Button>
+              </form>
+            </section>
+          </article>
         </div>
-      </div>
+      </main>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+      <footer className="bg-gray-50 dark:bg-gray-800">
+        <div className="p-4 py-2 mx-auto max-w-screen-xl md:p-8 lg:p-5">
+          <div className="text-center">
+            <span className="block text-sm text-center text-gray-500 dark:text-gray-400">
+              © 2023{" "}
+              <a href="#" className="hover:underline">
+                Web Request
+              </a>
+              . All Rights Reserved.
+            </span>
+          </div>
         </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </footer>
+    </>
+  );
 }
