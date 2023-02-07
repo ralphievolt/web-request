@@ -83,7 +83,7 @@ export default function Home() {
 
                 <Button
                   type="submit"
-                  className="bg-purple-600 hover:bg-purple-500"
+                  className="bg-purple-500 hover:bg-purple-600"
                 >
                   Add
                 </Button>
