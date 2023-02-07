@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
-import { Label, TextInput, Button } from "flowbite-react";
+import { Label, TextInput, Button, HiMail } from "flowbite-react";
 var url = require("url");
 
 export default function Home() {
   const jobRef = React.useRef(null);
   const pathRef = React.useRef(null);
   const fileNameRef = React.useRef(null);
+  const [fileUrl, setFileUrl] = React.useState("");
+  const [cutFile, setCutFile] = React.useState("");
 
   const onAddFileName = (e) => {
     e.preventDefault();
@@ -28,7 +30,9 @@ export default function Home() {
 
     const reg3 = new RegExp(" ", "g");
     const finalURL = onlinePath.replace(reg3, "%20");
-    console.log(finalURL + "/" + fileNameRef.current.value);
+
+    setFileUrl(finalURL + "/" + fileNameRef.current.value);
+    setCutFile(fileNameRef);
 
     // pathRef.replace("C:\PDM\","http://torepdm2022.array.local/SOLIDWORKSPDM/")
 
@@ -84,9 +88,8 @@ export default function Home() {
                     id="cut_file_name"
                     type="text"
                     required={true}
-                    ref={fileNameRef}
+                    rightIcon={HiMail}
                   />
-                  <a href="C:\PDM\ArrayVault1\Brands\TOO FACED\_CNC">TEST</a>
                 </div>
 
                 <Button
@@ -96,6 +99,11 @@ export default function Home() {
                   Add
                 </Button>
               </form>
+              <div className="mt-2">
+                <a href={fileUrl} target="_blank">
+                  {fileUrl}
+                </a>
+              </div>
             </section>
           </article>
         </div>
