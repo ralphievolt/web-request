@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { Label, TextInput, Button, HiMail } from "flowbite-react";
-var url = require("url");
+import { Label, TextInput, Button } from "flowbite-react";
 
 export default function Home() {
   const jobRef = React.useRef(null);
@@ -12,32 +11,22 @@ export default function Home() {
 
   const onAddFileName = (e) => {
     e.preventDefault();
-    let path = pathRef.current.value.toString();
-    // console.log(jobRef.current.value);
-    // console.log(pathRef.current.value);
-    // console.log(fileNameRef.current.value);
+    let path = pathRef.current.value;
 
     const reg1 = new RegExp("\\\\", "g");
     const noBackSlash = path.replace(reg1, "/");
-    console.log(noBackSlash);
 
     const reg2 = new RegExp("C:/PDM/", "g");
     const onlinePath = noBackSlash.replace(
       reg2,
       "https://torepdm2022.array.local/SOLIDWORKSPDM/"
     );
-    console.log(onlinePath);
 
     const reg3 = new RegExp(" ", "g");
     const finalURL = onlinePath.replace(reg3, "%20");
 
     setFileUrl(finalURL + "/" + fileNameRef.current.value);
     setCutFile(fileNameRef);
-
-    // pathRef.replace("C:\PDM\","http://torepdm2022.array.local/SOLIDWORKSPDM/")
-
-    //http://torepdm2022.array.local/SOLIDWORKSPDM
-    //C:\PDM\ArrayVault1\Brands\TOO FACED\_CNC
   };
   return (
     <>
@@ -84,7 +73,12 @@ export default function Home() {
                   <div className="mb-2 block">
                     <Label htmlFor="cut_file_name" value="Cut File Name" />
                   </div>
-                  <TextInput id="cut_file_name" type="text" required={true} />
+                  <TextInput
+                    id="cut_file_name"
+                    type="text"
+                    required={true}
+                    ref={fileNameRef}
+                  />
                 </div>
 
                 <Button
