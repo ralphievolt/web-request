@@ -84,12 +84,7 @@ export default function Home() {
                   <div className="mb-2 block">
                     <Label htmlFor="cut_file_name" value="Cut File Name" />
                   </div>
-                  <TextInput
-                    id="cut_file_name"
-                    type="text"
-                    required={true}
-                    rightIcon={HiMail}
-                  />
+                  <TextInput id="cut_file_name" type="text" required={true} />
                 </div>
 
                 <Button
